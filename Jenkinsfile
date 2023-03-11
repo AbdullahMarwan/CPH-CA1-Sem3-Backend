@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools {
-        //gradle '8.0.2'
-        gradle 'Gradle 8.0.2'
+        //gradle 'Gradle 8.0.2'
+        gradle 'Gradle 7.6.1'
     }
     triggers {
         pollSCM '* * * * *'
@@ -10,7 +10,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'gradle --version'
                 sh 'gradle assemble --stacktrace'
             }
         }
