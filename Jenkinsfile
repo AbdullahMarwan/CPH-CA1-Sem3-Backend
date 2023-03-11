@@ -16,12 +16,12 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                sh 'gradle docker'
+                sh 'gradle buildImageViaDockerfile'
             }
         }
         stage('Run Docker Image') {
             steps {
-                sh 'gradle dockerRun'
+                sh 'gradle runDockerImage'
             }
         }
     }
