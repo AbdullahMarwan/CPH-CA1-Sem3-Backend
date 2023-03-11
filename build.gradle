@@ -6,7 +6,6 @@ plugins {
     id 'com.palantir.docker-run' version '0.34.0'
 }
 
-name = 'ca1-backend'
 group = 'com.cph'
 version = '0.0.1'
 sourceCompatibility = '17'
