@@ -8,13 +8,16 @@ import java.util.logging.Logger;
 
 public class PhoneMapper {
 
-    static void saveNewPhone(Phone phone) {
+    PersistenceManager persistenceManager;
+
+    public PhoneMapper(PersistenceManager persistenceManager) {
+        this.persistenceManager = persistenceManager;
+    }
+
+    void saveNewPhone(Phone phone) {
         Logger.getLogger("web").log(Level.INFO, "");
 
-        PersistenceManager persistenceManager = new PersistenceManager("pu");
-
         persistenceManager.entityTransaction().begin();
-
         persistenceManager.getEntityManager().persist((phone));
         persistenceManager.entityTransaction().commit();
     }
