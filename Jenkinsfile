@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'gradle --version'
                 sh 'gradle assemble --stacktrace'
             }
         }
