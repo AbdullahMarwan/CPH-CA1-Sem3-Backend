@@ -1,7 +1,6 @@
 pipeline {
     agent any
     tools {
-        //gradle 'Gradle 8.0.2'
         gradle 'Gradle 7.6.1'
     }
     triggers {
@@ -10,7 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'gradle assemble --stacktrace'
+                sh 'gradle assemble'
             }
         }
          stage('Test') {
