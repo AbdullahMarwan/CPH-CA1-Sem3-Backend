@@ -1,13 +1,11 @@
 package com.cph.CA1Backend.persistance;
 
-
 import com.cph.CA1Backend.entities.Person;
 import jakarta.persistence.TypedQuery;
 
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 
 public class PersonMapper {
     PersistenceManager persistenceManager;
@@ -19,9 +17,7 @@ public class PersonMapper {
     public Person getSpecificPerson(int personId) {
         Logger.getLogger("web").log(Level.INFO, "");
 
-        Person person = persistenceManager.getEntityManager().find(Person.class, personId);
-
-        return person;
+        return persistenceManager.getEntityManager().find(Person.class, personId);
     }
 
     public List<Person> getAllPeople() {
@@ -30,7 +26,7 @@ public class PersonMapper {
         return query.getResultList();
     }
 
-    public Person create(Person person) {
+    public void create(Person person) {
         Logger.getLogger("web").log(Level.INFO, "");
 
         persistenceManager.entityTransaction().begin();
