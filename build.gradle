@@ -27,7 +27,7 @@ tasks.named('test') {
 }
 
 String imageName = "${project.group}/${project.name}"
-buildImageViaDockerfile {
+docker {
     dockerfile file('Dockerfile')
     dependsOn(tasks.findByPath("build"))
     name imageName
@@ -35,7 +35,7 @@ buildImageViaDockerfile {
     buildArgs(['JAR_FILE': "${bootJar.archiveFileName.get()}"])
 }
 
-runDockerImage {
+dockerRun {
     name "${project.name}-container"
     image imageName
     ports '5000:8080'
