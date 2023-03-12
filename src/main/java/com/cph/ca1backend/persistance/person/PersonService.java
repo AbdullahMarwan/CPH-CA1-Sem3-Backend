@@ -22,4 +22,30 @@ public class PersonService {
     public void deletePerson(Integer id) {
         personRepository.deleteById(id);
     }
+
+    /*
+     public PersonMapper(PersistenceManager persistenceManager) {
+        this.persistenceManager = persistenceManager;
+    }
+
+    public Person getSpecificPerson(int personId) {
+        Logger.getLogger("web").log(Level.INFO, "");
+
+        return persistenceManager.getEntityManager().find(Person.class, personId);
+    }
+
+    public List<Person> getAllPeople() {
+        TypedQuery<Person> query = persistenceManager.getEntityManager().createNamedQuery("getAllPeople", Person.class);
+
+        return query.getResultList();
+    }
+
+    public void create(Person person) {
+        Logger.getLogger("web").log(Level.INFO, "");
+
+        persistenceManager.entityTransaction().begin();
+        persistenceManager.getEntityManager().persist((person));
+        persistenceManager.entityTransaction().commit();
+    }
+     */
 }
