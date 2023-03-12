@@ -3,6 +3,8 @@ package com.cph.ca1backend.controllers;
 import com.cph.ca1backend.entities.Person;
 import com.cph.ca1backend.constants.RestConstants;
 import com.cph.ca1backend.persistance.person.PersonService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,15 +12,12 @@ import java.util.List;
 
 @RestController
 @RequestMapping("persons")
+@Tag(name = "Persons", description = "Persons API")
 public class PersonsController {
     @Autowired
     private PersonService personService;
 
-    @GetMapping(value = "test")
-    public String testEndpoint() {
-        return "Hello test endpoint!";
-    }
-
+    @Operation(summary = "Get all persons")
     @RequestMapping(
             value = "/",
             method = RequestMethod.GET,
@@ -28,6 +27,7 @@ public class PersonsController {
         return personService.getAllPersons();
     }
 
+    @Operation(summary = "Creates a person")
     @RequestMapping(
             value = "/",
             method = RequestMethod.POST,

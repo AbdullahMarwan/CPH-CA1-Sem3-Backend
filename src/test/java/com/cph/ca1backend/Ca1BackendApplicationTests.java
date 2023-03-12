@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class Ca1BackendApplicationTests {
-	@Test
+	//@Test
 	@Disabled
 	void contextLoads() {
 	}
