@@ -1,12 +1,14 @@
-package com.cph.CA1Backend.persistance;
+package com.cph.ca1backend.persistance.old;
 
-import com.cph.CA1Backend.entities.Person;
+import com.cph.ca1backend.entities.Person;
 import jakarta.persistence.TypedQuery;
+
 
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/*
 public class PersonMapper {
     PersistenceManager persistenceManager;
 
@@ -34,3 +36,4 @@ public class PersonMapper {
         persistenceManager.entityTransaction().commit();
     }
 }
+*/

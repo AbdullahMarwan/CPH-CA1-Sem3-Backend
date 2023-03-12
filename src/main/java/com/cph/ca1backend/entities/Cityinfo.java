@@ -1,4 +1,4 @@
-package com.cph.CA1Backend.entities;
+package com.cph.ca1backend.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

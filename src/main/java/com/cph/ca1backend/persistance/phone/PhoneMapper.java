@@ -1,11 +1,12 @@
-package com.cph.CA1Backend.persistance;
+package com.cph.ca1backend.persistance.phone;
 
 
-import com.cph.CA1Backend.entities.Phone;
+import com.cph.ca1backend.entities.Phone;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/*
 public class PhoneMapper {
 
     PersistenceManager persistenceManager;
@@ -22,3 +23,5 @@ public class PhoneMapper {
         persistenceManager.entityTransaction().commit();
     }
 }
+
+*/
