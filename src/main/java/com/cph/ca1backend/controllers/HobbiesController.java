@@ -30,14 +30,14 @@ public class HobbiesController {
         return hobbyService.getAllHobbies();
     }
 
-    @Operation(summary = "Creates a person")
+    @Operation(summary = "Create a Hobby")
     @RequestMapping(
             value = "/",
             method = RequestMethod.POST,
             consumes = RestConstants.MEDIA_TYPE_APPLICATION_JSON,
             produces = RestConstants.MEDIA_TYPE_APPLICATION_JSON
     )
-    public void createHobby(@RequestBody Hobby person) {
+    public void createHobby(@RequestBody Hobby hobby) {
         System.out.println("Hello");
     }
 
