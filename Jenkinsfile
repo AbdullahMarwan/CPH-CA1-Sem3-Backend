@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        JDBC_DRIVER    = 'com.mysql.cj.jdbc.Driver'
+        JDBC_DRIVER = 'com.mysql.cj.jdbc.Driver'
     }
     tools {
         gradle 'Gradle 7.6.1'
