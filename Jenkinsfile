@@ -10,6 +10,14 @@ pipeline {
         pollSCM '* * * * *'
     }
     stages {
+        stage('Test-env') {
+            steps {
+               echo env.JDBC_DRIVER
+               echo env.JDBC_URL
+               echo env.JDBC_USER
+               echo env.JDBC_PASSWORD
+            }
+        }
         stage('Build') {
             steps {
                 sh 'gradle assemble'
