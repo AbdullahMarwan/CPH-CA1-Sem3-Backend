@@ -7,6 +7,9 @@ pipeline {
         pollSCM '* * * * *'
     }
     stages {
+        environment {
+            JDBC_DRIVER    = 'com.mysql.cj.jdbc.Driver'
+        }
         stage('Build') {
             steps {
                 sh 'gradle assemble'
