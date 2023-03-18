@@ -35,7 +35,7 @@ public class PersonsController {
             produces = RestConstants.MEDIA_TYPE_APPLICATION_JSON
     )
     public void createPerson(@RequestBody Person person) {
-        System.out.println("Hello");
+        personService.createPerson(person);
     }
 
 //    @GetMapping
