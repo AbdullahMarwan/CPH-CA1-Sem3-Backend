@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        JDBC_DRIVER    = 'com.mysql.cj.jdbc.Driver'
+    }
     tools {
         gradle 'Gradle 7.6.1'
     }
@@ -7,9 +10,6 @@ pipeline {
         pollSCM '* * * * *'
     }
     stages {
-        environment {
-            JDBC_DRIVER    = 'com.mysql.cj.jdbc.Driver'
-        }
         stage('Build') {
             steps {
                 sh 'gradle assemble'
